@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#outer{
+    width: 100vw;
+    height: 100vh;
+    background-color: darkmagenta;
+    position: relative;
+}
+#moving-icon{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+/*    border: 2px white solid;*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.moving-icon-inner{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    animation: pulse-weak 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-weak{ 
+    0%{
+        transform: scale(0);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(1);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+
+

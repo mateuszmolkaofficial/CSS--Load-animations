@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#inner{
+    width: 100vw;
+    height: 100vh;
+    background-color: lightgreen;
+    position: relative;
+}
+#moving-icon{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+/*    border: 2px white solid;*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+     vertical-align: bottom;
+     line-height: 85px;
+}
+.moving-icon-item{
+    display: inline-block;
+    width: 8px;
+    height: 35px;
+    background-color: white;
+    animation: makebigger 1s linear infinite;
+}
+.first{
+    animation-delay: 0s;
+}
+.second{
+    animation-delay: 0.1s;
+}
+.third{
+    animation-delay: 0.2s;
+}
+.fourth{
+    animation-delay: 0.3s;
+}
+.fifth{
+    animation-delay: 0.4s ;
+}
+
+@keyframes makebigger{ 
+          0%{ transform: scaleY(1);} 
+          15% { transform: scaleY(2.5);}
+          30%{ transform: scaleY(1);}
+}
+

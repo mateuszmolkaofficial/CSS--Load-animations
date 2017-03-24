@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#outer{
+    width: 100vw;
+    height: 100vh;
+    background-color: darkmagenta;
+    position: relative;
+}
+#moving-icon{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+/*    border: 2px white solid;*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.moving-icon-inner{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+/*    background-color: white;*/
+    animation: circular-motion 3s infinite linear;
+}
+
+.moving-icon-inner-1{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    background-color: white;
+    top:0;
+    left:0;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: pulse 1.5s linear infinite;
+}
+.moving-icon-inner-2{
+    width: 60%;
+    height: 60%;
+    top:0;
+    right:0;
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: pulse 1.5s linear infinite;
+}
+@keyframes circular-motion{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.delay{
+    animation-delay: 0.75s
+}
+@keyframes pulse{ 
+    0%, 100{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1);
+    }
+}
+
+
+

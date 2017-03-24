@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#inner{
+    width: 100vw;
+    height: 100vh;
+    background-color: darkorange;
+    position: relative;
+}
+#moving-icon{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+/*    border: 2px white solid;*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+     vertical-align: bottom;
+    font-size: 0;
+}
+.moving-icon-item{
+    display: inline-block;
+    width: 33%;
+    height: 33%;
+    background-color: white;
+    animation: pulse 1.5s ease infinite;
+}
+.first{
+    animation-delay: 0s;
+}
+.second{
+    animation-delay: 0.1s;
+}
+.third{
+    animation-delay: 0.2s;
+}
+.fourth{
+    animation-delay: 0.3s;
+}
+.fifth{
+    animation-delay: 0.4s;
+}
+
+@keyframes pulse{ 
+          0%{ transform: scale(1);}
+          30% { transform: scale(0);}
+          60% { transform: scale(1);}
+          100%{ transform: scale(1);}
+}
+

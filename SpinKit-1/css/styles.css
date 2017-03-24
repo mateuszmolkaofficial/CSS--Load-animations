@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#outer{
+    width: 100vw;
+    height: 100vh;
+    background-color: lightgreen;
+    position: relative;
+}
+#moving-icon{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+/*    border: 2px white solid;*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#moving-icon-inner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    animation: rotate 1.5s ease-in-out infinite;
+}
+@keyframes rotate{ 
+          0%{transform:perspective(100px) rotateY(0) rotateX(0);} 
+          50%{transform: perspective(100px) rotateY(0) rotateX(-180deg);}
+          100%{ transform: perspective(100px) rotateY(-180deg) rotateX(-180deg);}
+}
+
+
